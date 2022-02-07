@@ -87,11 +87,11 @@ let _healt = JSON.parse(fs.readFileSync('./lib/rpg/healt.json'))
 
 //»»»𝘖𝘱𝘵𝘪𝘰𝘯
 let p = '```'
-publik = false
+publik = true
 hit_today = [];
 healtawal = 100
 potionawal = 1
-let lolkey = '47334b840fe00cc227eefec9' //Daftar Atau Beli Di lolhuman.xyz
+let lolkey = 'IJUL' //Daftar Atau Beli Di lolhuman.xyz
 
 //━━━━━━━━━━━━━━━[ AU LUPA ]━━━━━━━━━━━━━━━\\
 
@@ -746,18 +746,17 @@ pp = monospace(`📍 𝗣𝗿𝗼𝗳𝗶𝗹𝗲 𝗣𝗹𝗮𝘆𝗲𝗿
 	    const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
         const isTagedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
         
-        //No Enc? buy 5K doang dah dapet
-        function _0x7f44(_0x207367,_0x5eab14){var _0x210b40=_0x210b();return _0x7f44=function(_0x7f4460,_0x51374c){_0x7f4460=_0x7f4460-0xa9;var _0x475823=_0x210b40[_0x7f4460];return _0x475823;},_0x7f44(_0x207367,_0x5eab14);}var _0x4d3b6a=_0x7f44;(function(_0x133ca6,_0x6a122a){var _0x4d0de5=_0x7f44,_0x2f4d26=_0x133ca6();while(!![]){try{var _0x28fa68=parseInt(_0x4d0de5(0xba))/0x1*(-parseInt(_0x4d0de5(0xae))/0x2)+parseInt(_0x4d0de5(0xbf))/0x3*(parseInt(_0x4d0de5(0xb8))/0x4)+parseInt(_0x4d0de5(0xbb))/0x5*(-parseInt(_0x4d0de5(0xbc))/0x6)+-parseInt(_0x4d0de5(0xb0))/0x7*(parseInt(_0x4d0de5(0xb9))/0x8)+-parseInt(_0x4d0de5(0xbd))/0x9*(parseInt(_0x4d0de5(0xb4))/0xa)+-parseInt(_0x4d0de5(0xb5))/0xb*(-parseInt(_0x4d0de5(0xb1))/0xc)+parseInt(_0x4d0de5(0xab))/0xd;if(_0x28fa68===_0x6a122a)break;else _0x2f4d26['push'](_0x2f4d26['shift']());}catch(_0x3b1f4a){_0x2f4d26['push'](_0x2f4d26['shift']());}}}(_0x210b,0xcb0f9));if(!isGroup&&isCmd)console[_0x4d3b6a(0xac)](color('[','white'),color('➳',_0x4d3b6a(0xbe)),color(']',_0x4d3b6a(0xb6)),color('NAMA',_0x4d3b6a(0xad)),color(pushname,_0x4d3b6a(0xaa)),color(_0x4d3b6a(0xb3),_0x4d3b6a(0xb6)),color(_0x4d3b6a(0xaf),_0x4d3b6a(0xad)),color(command,_0x4d3b6a(0xbe)),_0x4d3b6a(0xa9),color(args['length']));if(isCmd&&isGroup)console['log'](color('[',_0x4d3b6a(0xb6)),color('➳','lime'),color(']',_0x4d3b6a(0xb6)),color('NAMA',_0x4d3b6a(0xad)),color(pushname,'yellow'),color(_0x4d3b6a(0xb3),_0x4d3b6a(0xb6)),color('FITUR\x20:',_0x4d3b6a(0xad)),color(command,'lime'),color(_0x4d3b6a(0xb2)+groupName,_0x4d3b6a(0xaa)),_0x4d3b6a(0xa9),color(args[_0x4d3b6a(0xb7)]));function _0x210b(){var _0x30eb6e=['283160gswKDv','22hbvvVF','white','length','46256nZrKDB','856MGXHeL','42ahNBVf','10HUGTwF','4532286lIjhkR','45KiVFAG','lime','201QbJjVG','args\x20:','yellow','43043572nuuwff','log','red','22136pfKYYC','FITUR\x20:','107723xRMCey','3058356uSMjSY','Di\x20Group\x20','MENGGUNAKAN'];_0x210b=function(){return _0x30eb6e;};return _0x210b();}
-        //Beli Di http://wa.me/6285849261085
-        //Atau https://bit.ly/3sjQM6F
+        if (!isGroup && isCmd) console.log(color('[','white'), color('➳','lime'), color(']','white'), color('NAMA','red'), color(pushname,'yellow'), color('MENGGUNAKAN','white'), color('FITUR :','red'), color(command, 'lime'), 'args :', color(args.length))
+        
+        if (isCmd && isGroup) console.log(color('[','white'), color('➳','lime'), color(']','white'), color('NAMA','red'), color(pushname,'yellow'), color('MENGGUNAKAN','white'), color('FITUR :','red'), color(command, 'lime'), color(`Di Group ${groupName}`,'yellow'), 'args :', color(args.length))
+
 
 //━━━━━━━━━━━━━━━[ WELCOME TO MENU ]━━━━━━━━━━━━━━━\\     
 switch(is) {
 }            
 switch (command) {
 
-case 'profile':
-case 'rpgmenu':
+case 'profile': case 'rpgmenu':
 checkHealt(sender)
 break
 case 'mybag':
@@ -768,8 +767,7 @@ but = [{ buttonId: `!adventure`, buttonText: { displayText: 'Adventure' }, type:
           sendButton(from, done, 'Inventori User', but)
 break
 
-case 'misi':
-case 'quest':
+case 'misi': case 'quest':
  if (!isGroup) return reply(mess.only.group)
  if (!isPetualang) return reply(mess.only.player)
  listMsg = {
@@ -781,7 +779,7 @@ case 'quest':
                       "title": `Pilih Quest Sesuai Dengan Levelmu!`,
   rows: [
                           {
-                              "title": "Kill Slime, Lvl copper",
+                              "title": "Kill Slime, Lvl vopper",
                               "rowId": "slime"
                            },
                            {
@@ -929,7 +927,7 @@ bayarHealt(sender, 10)
 	      break
     case 'adventure':
           if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(mess.limit) 
-          if (isHealt(sender)) return reply('Healt')
+        //  if (isHealt(sender)) return reply('Healt')
           if (!isPetualang) return reply(mess.only.player)		
 	      ngab = ['Longsor','Letusan Gunung','Tsunami','Gempa Bumi','Meteor','Demon']
 	      const sesuatu = ngab[Math.floor(Math.random() * ngab.length)]
@@ -960,7 +958,7 @@ bayarHealt(sender, 10)
 		  addLevelingXp(sender, adven)
 		  addBalance(sender, money, balance) 
           limitAdd(sender, limit) 
-          await healtAdd(sender)
+        //  await healtAdd(sender)
           break
    	case 'mining':   
    	      if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(mess.limit) 
@@ -1585,10 +1583,9 @@ bayarHealt(sender, 10)
           limitAdd(sender, limit)
           break;		  
     case 'sticker':
-    case 'stiker':
+    case 'stiker': 
     case 'sg':
     case 's':
-    case 'sgif':
           var a = "ZeeBot";
           var b = "By Sena";
           if (isMedia && !mek.message.videoMessage || isQuotedImage ) {
@@ -2290,7 +2287,7 @@ bayarHealt(sender, 10)
           ini_vid = await getBuffer(get_result.download_video)
           await zee.sendMessage(from, ini_vid, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
           break
-    case 'ytmp3':
+    case 'ytmp3v2':
           if (args.length < 1) return reply('Link?')         
           reply(mess.wait)      
           get_result = await fetchJson(`http://hadi-api.herokuapp.com/api/ytaudio?url=${v}`)
@@ -2375,9 +2372,28 @@ bayarHealt(sender, 10)
            { buttonId: `!dwd`, buttonText: { displayText: 'DOWNLOAD️' }, type: 1 }]
           sendButton(from, result, 'MediaFire Downloader', but, troli)
           break
-          case 'dwd':
+    case 'dwd':
           sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
           limitAdd(sender, limit)
+          break
+    case 'fbdl':
+          if (args.length == 0) return reply(`Example: ${prefix + command} https://id-id.facebook.com/SamsungGulf/videos/video-bokeh/561108457758458/`)
+          ini_url = args[0]
+          ini_url = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${lolkey}&url=${v}`)
+          ini_url = ini_url.result
+          ini_buffer = await getBuffer(ini_url)
+          await zee.sendMessage(from, ini_buffer, video, { quoted: mek })
+          break
+    case 'ytmp3':
+          if (args.length == 0) return reply(`Example: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
+          ini_link = args[0]
+          get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkey}&url=${ini_link}`)
+          get_result = get_result.result
+          ini_txt = `Title:\n${get_result.title}\nSize:\n${get_result.size}`
+          ini_buffer = await getBuffer(get_result.thumbnail)
+          await zee.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
+          get_audio = await getBuffer(get_result.link)
+          await zee.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek })
           break
 //+++Random
     case 'waifu': case 'loli': case 'husbu': case 'milf': case 'cosplay': case 'wallml':
@@ -2552,9 +2568,10 @@ ${q+=1}.ranime animenya
 ${q+=1}.play query
 ${q+=1}.tiktok link
 ${q+=1}.ytmp3 link
+${q+=1}.ytmp3v2 link
 ${q+=1}.ytmp4 link
 ${q+=1}.twitter link
-${q+=1}.facebook link
+${q+=1}.fbdl link
 ${q+=1}.Instagram link
 ${q+=1}.mediafire link
 
