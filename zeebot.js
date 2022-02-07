@@ -998,7 +998,7 @@ bayarHealt(sender, 10)
           if (!isGroup) return reply(mess.only.group)  
 		  if (isPetualang) return reply('Kamu sudah menjadi petualang')
 	   	  _petualang.push(sender)
-		  fs.writeFileSync('/lib/data/inventori.json', JSON.stringify(_petualang))
+		  fs.writeFileSync('./lib/data/inventori.json', JSON.stringify(_petualang))
 		  capt = `🎉Selamat ${pushname}🎊\nKamu terdaftar sebagai petualang!\nSilahkan ketik ${prefix}rpgmenu`
 		  zee.sendMessage(from, capt, text, {quoted: mek})		
 		  addInventori(sender)
@@ -1072,14 +1072,14 @@ bayarHealt(sender, 10)
 		  if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)    
 		  adprem = `${args[0].replace('@','')}@s.whatsapp.net`
 		  prem.push(adprem)
-		  fs.writeFileSync('/lib/data/premium.json', JSON.stringify(prem))
+		  fs.writeFileSync('./lib/data/premium.json', JSON.stringify(prem))
 	 	  reply(`BERHASIL MENAMBAHKAN USER PREMIUM`)
 		  break				
 	case 'dellprem':  case 'delpremium':
 		  if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)    
 		  delp = body.slice(10)
 		  prem.splice(`${delp}@s.whatsapp.net`, 1)
-		  fs.writeFileSync('/lib/data/premium.json', JSON.stringify(prem))
+		  fs.writeFileSync('./lib/data/premium.json', JSON.stringify(prem))
 		  reply(`Berhasil Menghapus wa.me/${delp} Dari Daftar Premium`)
 		  break
 	case 'listprem': case 'listpremium':
